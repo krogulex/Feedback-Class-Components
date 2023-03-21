@@ -7,7 +7,7 @@ export class Statistics extends Component {
     const { good, neutral, bad, total, positivePercentage } = this.props
 
     return (
-      <div>
+      <div className='statistics'>
         <h2>Statistics</h2>
         {total > 0 ? (
                 <div>

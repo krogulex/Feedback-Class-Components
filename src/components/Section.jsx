@@ -3,10 +3,11 @@ import { Component } from 'react';
 
 export class Section extends Component {
   render() {
-    const { title } = this.props
+    const { title, children } = this.props
     return (
-      <section className="statistics">
+      <section className="box">
         <h1>{title}</h1>
+        {children}
       </section>
     );
   }
