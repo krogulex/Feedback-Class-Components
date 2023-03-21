@@ -35,7 +35,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="content-box">
         <Section title="Please leave your feedback">
         <FeedbackOptions
           options={Object.keys(this.state)}
