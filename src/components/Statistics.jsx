@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
+import { Notification } from './Notification';
 
 export class Statistics extends Component {
 
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-    hasValue: false,
-  };
+  render() {
+    const { good, neutral, bad, total, positivePercentage } = this.props
 
-/*   constructor() {
-    super();
-    this.good = this.state.good;
+    return (
+      <div>
+        <h2>Statistics</h2>
+        {total > 0 ? (
+                <div>
+                <p>Good: {good}</p>
+                <p>Neutral: {neutral}</p>
+                <p>Bad: {bad}</p>
+                <p>Total: {total}</p>
+                <p>Positive feedback: {positivePercentage}%</p>
+            </div>
+            ) : (
+                <Notification message={'No feedback given'}/>
+            )}
+      </div>
+    )
   }
- */
-  handleChange = (event, opinion) => {
+
+
+  /* handleChange = (event, opinion) => {
 
     if (opinion === "good") {
         this.state.good += 1;
@@ -66,5 +77,5 @@ export class Statistics extends Component {
             )}
       </section>
     );
-  }
+  } */
 }
